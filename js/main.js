@@ -54,7 +54,7 @@ nextBtn.addEventListener("click", nextSlide);
 function nextSlide() { 
     console.log(slideLength);
     if(move > slideLength) {
-        move += -(sliderImageContainer.children[0].clientWidth);
+        move += -(oneImageWidth);
         renderImgaesSlide(move);
     }
     if(index < data.length - 1) {
