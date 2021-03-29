@@ -1,9 +1,9 @@
 // ************************************ Navbar hamburger Button ************************************
-let hamburgerBtn = document.querySelector(".hamburger-btn");
-let hamburgerBtnImg = document.querySelector(".hamburger-btn img");
-let navLinks = document.querySelector(".nav-links");
-let isOpen = false;
-
+// let hamburgerBtn = document.querySelector(".hamburger-btn");
+// let hamburgerBtnImg = document.querySelector(".hamburger-btn img");
+// let navLinks = document.querySelector(".nav-links");
+// let isOpen = false;
+/*
 hamburgerToggle = () => {
     if(!isOpen) {
         navLinks.style.display = "flex";
@@ -14,8 +14,9 @@ hamburgerToggle = () => {
     }
     isOpen = !isOpen;
 }
+*/
 
-hamburgerBtn.addEventListener("click", hamburgerToggle);
+// hamburgerBtn.addEventListener("click", hamburgerToggle);
 
 // ************************************ Slider Images ************************************
 let sliderImageContainer = document.querySelector(".slider-image-container");
@@ -52,11 +53,10 @@ prevBtn.addEventListener("click", prevSlide);
 nextBtn.addEventListener("click", nextSlide);
 
 function nextSlide() { 
-    console.log(slideLength);
     if(move > slideLength) {
-        move += -(oneImageWidth);
-        renderImgaesSlide(move);
+        move += -(sliderImageContainer.children[0].clientWidth);
     }
+    renderImgaesSlide(move);
     if(index < data.length - 1) {
         index++;
         renderDataSlide(data[index].title, data[index].desc);
