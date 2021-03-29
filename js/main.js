@@ -52,10 +52,9 @@ prevBtn.addEventListener("click", prevSlide);
 nextBtn.addEventListener("click", nextSlide);
 
 function nextSlide() { 
-    // if(move > slideLength) {
-    //     move += -(sliderImageContainer.children[0].clientWidth);
-    // }
-    move += -(840);
+    if(move > slideLength) {
+        move += -(sliderImageContainer.children[0].clientWidth);
+    }
     renderImgaesSlide(move);
     if(index < data.length - 1) {
         index++;
