@@ -48,35 +48,36 @@ let data = [
 ];
 let index = 0;
 
-nextSlide = () => { 
-    if(move > slideLength) {
-        move += -(sliderImageContainer.children[0].clientWidth);
-        sliderImageContainer.style.transform = `translateX(${move}px)`;
-    }
-    console.log("OK");
-    console.log(move);
-
-    if(index < data.length - 1) {
-        index++;
-        sliderDescTitle.textContent = data[index].title;
-        sliderDescParagraph.textContent = data[index].desc;
-    }
-}
-
-prevSlide = () => { 
-    let isFirstSlide = move == 0 ? false : true;
-    if(isFirstSlide) {
-        move += (sliderImageContainer.children[0].clientWidth);
-    }
-    sliderImageContainer.style.transform = `translateX(${move}px)`;
-
-
-    if(index > 0) {
-        index--;
-        sliderDescTitle.textContent = data[index].title;
-        sliderDescParagraph.textContent = data[index].desc;
-    }
-}
-
 prevBtn.addEventListener("click", prevSlide);
 nextBtn.addEventListener("click", nextSlide);
+
+function nextSlide() { 
+    if(move > slideLength) {
+        move += -(sliderImageContainer.children[0].clientWidth);
+        renderImgaesSlide(move);
+    }
+    if(index < data.length - 1) {
+        index++;
+        renderDataSlide(data[index].title, data[index].desc);
+    }
+}
+
+function prevSlide() { 
+    if(!move == 0) {
+        move += (sliderImageContainer.children[0].clientWidth);
+        renderImgaesSlide(move);
+    }
+    if(index > 0) {
+        index--;
+        renderDataSlide(data[index].title, data[index].desc);
+    }
+}
+
+function renderDataSlide(title, desc) {
+    sliderDescTitle.textContent = title;
+    sliderDescParagraph.textContent = desc;
+}
+
+function renderImgaesSlide(move) {
+    sliderImageContainer.style.transform = `translateX(${move}px)`;
+}
