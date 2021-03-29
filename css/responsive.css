@@ -1,0 +1,131 @@
+@media(max-width: 1320px) {
+    .slider-content {
+        flex-direction: column;
+    }
+
+    .control-btns {
+        right: 0;
+    }
+
+    .slider-desc {
+        margin: 60px auto;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-desc {
+        margin: 60px auto;
+    }
+}
+
+@media(max-width: 880px) {
+
+    nav {
+        margin: 20px 0 0 30px;
+    }
+    
+    .slider-image {
+        width: 482px;
+    }
+
+    .control-btns {
+        width: 113px;
+    }
+
+    .control-btns img {
+        width: 11px;
+    }
+
+    .control-btns .prev, .control-btns .next {
+        height: 55px;
+        line-height: 68px;
+    }
+
+    .control-btns .prev {
+        padding-left: 22px;
+    }
+
+    .control-btns .next {
+        padding-right: 22px;
+    }
+}
+
+@media(max-width: 499px) {
+
+    nav {
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-content {
+        justify-content: center;
+        position: relative;
+    }
+
+    .hamburger-btn {
+        position: absolute;
+        left: 30px;
+        top: 40px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .nav-content .logo {
+        text-align: center;
+        display: block;
+        margin: 25px 0 0;
+    }
+
+    .nav-content .nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        background: #fff;
+        height: 106px;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 17px;
+        animation: fadeIn .3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .nav-content .nav-links ul {
+        margin-top: -5px;
+    }
+
+    .nav-content ul li:not(:last-child) {
+        margin: 0;
+    }
+
+    .nav-content .nav-links ul a {
+        color: #000;
+    }
+
+    .nav-content .nav-links ul a:after {
+        background: #000;
+    }
+
+    .slider-image {
+        width: 100%;
+    }
+
+    .slider-desc {
+        width: 100%;
+    }
+
+    .about-content img {
+        width: 100%;
+    }
+}
