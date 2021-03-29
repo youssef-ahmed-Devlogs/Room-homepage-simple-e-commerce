@@ -23,7 +23,7 @@ let prevBtn = document.querySelector(".prev");
 let nextBtn = document.querySelector(".next");
 let move = 0;
 let oneImageWidth = sliderImageContainer.children[0].clientWidth;
-let slideLength = -(sliderImageContainer.children.length * oneImageWidth - oneImageWidth);
+let slideLength = -((sliderImageContainer.children.length * oneImageWidth) - oneImageWidth);
 // ************************************ Slider Description ************************************
 let sliderDescTitle = document.querySelector(".slider-desc-title");
 let sliderDescParagraph = document.querySelector(".slider-desc-p");
