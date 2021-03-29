@@ -49,8 +49,7 @@ let data = [
 let index = 0;
 
 nextSlide = () => { 
-    let isEndSlide = move > slideLength ? true : false;
-    if(isEndSlide) {
+    if(move > slideLength) {
         move += -(sliderImageContainer.children[0].clientWidth);
         sliderImageContainer.style.transform = `translateX(${move}px)`;
     }
