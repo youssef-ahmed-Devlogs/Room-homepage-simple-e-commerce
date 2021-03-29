@@ -54,6 +54,7 @@ nextSlide = () => {
         move += -(sliderImageContainer.children[0].clientWidth);
         console.log(move);
     }
+    console.log("OK");
     sliderImageContainer.style.transform = `translateX(${move}px)`;
 
     if(index < data.length - 1) {
